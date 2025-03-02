@@ -1,0 +1,37 @@
+/* Address Page Styles */
+.address-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .address-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .address-form input,
+  .address-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .save-address-btn {
+    background: #008000;
+    color: white;
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  .save-address-btn:hover {
+    background: #006400;
+  }
+  
