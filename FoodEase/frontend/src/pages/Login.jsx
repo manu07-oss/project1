@@ -10,7 +10,7 @@ const Login = ({ setIsLoggedIn }) => {
 
   const handleLogin = async () => {
     try {
-      const res = await axios.post("http://localhost:5000/login", { email, password });
+      const res = await axios.post("/api/auth/login", { email, password });
       localStorage.setItem("username", res.data.username);
       setIsLoggedIn(true);
       navigate("/home");
