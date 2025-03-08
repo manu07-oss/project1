@@ -1,7 +1,8 @@
+// filepath: frontend/src/pages/Login.jsx
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import "../App.css";  // Import CSS
+import "../App.css";
 
 const Login = ({ setIsLoggedIn }) => {
   const [email, setEmail] = useState("");
@@ -10,7 +11,7 @@ const Login = ({ setIsLoggedIn }) => {
 
   const handleLogin = async () => {
     try {
-      const res = await axios.post("http://localhost:5000/login", { email, password });
+      const res = await axios.post("/api/auth/login", { email, password });
       localStorage.setItem("username", res.data.username);
       setIsLoggedIn(true);
       navigate("/home");

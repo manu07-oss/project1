@@ -1,7 +1,8 @@
+// filepath: frontend/src/pages/Register.jsx
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import "../App.css";  // Import CSS
+import "../App.css";
 
 const Register = ({ setIsLoggedIn }) => {
   const [username, setUsername] = useState("");
@@ -10,7 +11,7 @@ const Register = ({ setIsLoggedIn }) => {
   const navigate = useNavigate();
 
   const handleRegister = async () => {
-    await axios.post("http://localhost:5000/register", { username, email, password });
+    await axios.post("/api/auth/register", { username, email, password });
     localStorage.setItem("username", username);
     setIsLoggedIn(true);
     navigate("/home");
